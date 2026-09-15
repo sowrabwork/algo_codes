@@ -15,7 +15,7 @@ int main()
     {
         if(pattern[i]==pattern[j])
         {
-            lps[j]+=i+1;
+            lps[j]=i+1;
             i++;
             j++;
         }

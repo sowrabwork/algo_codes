@@ -35,7 +35,7 @@ int main()
     for(int i=0;i<v-1;i++)
     {
         bool updated=false;
-        for(int j=0;j<e-1;j++)
+        for(int j=0;j<e;j++)
         {
             if(cost[edges[j].end]>cost[edges[j].st]+edges[j].weight && cost[edges[j].st]!=100000)
             {
