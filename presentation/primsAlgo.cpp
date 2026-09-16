@@ -36,6 +36,7 @@ int main()
     visitedNode[0]=true;
     ans.push_back(0);
     bool found;
+    int mstCost=0;
     while(ans.size()<v)
     {
         for(int i=0;i<edges.size();i++)
@@ -53,6 +54,7 @@ int main()
             {
                 ans.push_back(edges[sortedEdge[i]].end);
                 visitedNode[edges[sortedEdge[i]].end]=true;
+                mstCost+=edges[sortedEdge[i]].weight;
                 found=true;
                 break;
             }
@@ -68,5 +70,6 @@ int main()
         for(int i=0;i<ans.size();i++)
         cout<<ans[i]<<" ";
         cout<<endl;
+        cout<<"total cost: "<<mstCost<<endl;
     }
 }
